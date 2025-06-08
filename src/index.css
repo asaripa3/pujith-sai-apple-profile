@@ -101,6 +101,7 @@
   position: relative;
   color: white;
   font-weight: bold;
+  z-index: 2;
 }
 
 .apple-name-glow::before {

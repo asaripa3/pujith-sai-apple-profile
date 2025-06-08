@@ -29,7 +29,7 @@ const Navigation = () => {
           <div className="font-bold text-xl">Pujith Sai Eswar</div>
           
           <div className="hidden md:flex items-center space-x-8">
-            {["About", "Skills", "Projects", "Experience", "Certifications", "Contact"].map((item) => (
+            {["About", "Skills", "Projects", "Experience", "Education", "Certifications", "Contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
