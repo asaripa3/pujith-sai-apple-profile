@@ -96,10 +96,41 @@
   }
 }
 
-/* Apple-style gradient for name */
-.apple-gradient {
+/* Apple-style glow effect for name */
+.apple-name-glow {
+  position: relative;
+  color: white;
+  font-weight: bold;
+}
+
+.apple-name-glow::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(90deg, #1CA2FE 0%, #AB50FC 16.67%, #ED4E8F 33.33%, #F9375E 50%, #FC8701 66.67%, #FDAB01 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: blur(8px);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.apple-name-glow::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #1CA2FE 0%, #AB50FC 16.67%, #ED4E8F 33.33%, #F9375E 50%, #FC8701 66.67%, #FDAB01 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: blur(20px);
+  opacity: 0.5;
+  z-index: -2;
 }

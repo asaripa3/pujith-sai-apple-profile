@@ -5,36 +5,18 @@ import { Badge } from "@/components/ui/badge";
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "Mechanical Design Engineer",
-      company: "Innovation Tech Solutions",
-      period: "2023 - Present",
-      description: "Leading design optimization projects and implementing sustainable manufacturing processes. Collaborated with cross-functional teams to deliver innovative engineering solutions.",
-      achievements: [
-        "Reduced production costs by 25% through process optimization",
-        "Led team of 5 engineers on major product development project",
-        "Implemented new quality control procedures"
-      ]
-    },
-    {
-      title: "Research Assistant",
-      company: "University Engineering Department",
-      period: "2022 - 2023",
-      description: "Conducted research on advanced materials and manufacturing techniques. Published findings in peer-reviewed journals and presented at international conferences.",
-      achievements: [
-        "Published 3 research papers in top-tier journals",
-        "Developed novel testing methodologies",
-        "Mentored undergraduate students"
-      ]
-    },
-    {
       title: "Engineering Intern",
-      company: "Manufacturing Excellence Corp",
-      period: "2021 - 2022",
-      description: "Supported senior engineers in design projects and gained hands-on experience with industrial manufacturing processes and quality assurance.",
+      company: "Synergies Casting Limited",
+      location: "Visakhapatnam, India",
+      period: "March 2021 - August 2021",
+      description: "Specialized in foundry operations and quality control for alloy wheel manufacturing, focusing on wheel distortion monitoring and process optimization.",
       achievements: [
-        "Completed 5+ design projects successfully",
-        "Improved testing efficiency by 20%",
-        "Received outstanding intern performance rating"
+        "Analyzed and monitored wheel distortion in foundry operations across casting, gate cutting, and heat treatment processes",
+        "Conducted comprehensive dimensional analysis to ensure compliance with tolerance limits and improve production quality",
+        "Gained hands-on experience with die casting, NDT (X-ray), and heat treatment for alloy wheel manufacturing",
+        "Suggested process optimizations that reduced distortion and enhanced manufacturing efficiency",
+        "Collaborated on data-driven quality improvements, contributing to significant reductions in scrap and rework",
+        "Worked with engineering teams to identify and implement quality control measures for defect reduction"
       ]
     }
   ];
@@ -43,20 +25,16 @@ const ExperienceSection = () => {
     <section id="experience" className="py-20 px-6 bg-muted/30">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Professional Experience</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Professional Trajectory</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Building expertise through diverse engineering challenges and leadership opportunities
+            Building expertise through hands-on engineering experience and manufacturing excellence
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           {experiences.map((experience, index) => (
             <div key={experience.title} className="relative">
-              {index !== experiences.length - 1 && (
-                <div className="absolute left-8 top-24 bottom-0 w-px bg-border" />
-              )}
-              
-              <div className="relative flex items-start mb-12">
+              <div className="relative flex items-start">
                 <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg mr-8 shadow-lg">
                   {index + 1}
                 </div>
@@ -67,6 +45,7 @@ const ExperienceSection = () => {
                       <div>
                         <h3 className="text-2xl font-semibold mb-2">{experience.title}</h3>
                         <p className="text-lg text-primary font-medium">{experience.company}</p>
+                        <p className="text-sm text-muted-foreground">{experience.location}</p>
                       </div>
                       <Badge variant="outline" className="mt-2 md:mt-0">
                         {experience.period}
@@ -79,7 +58,7 @@ const ExperienceSection = () => {
                     
                     <div className="space-y-2">
                       <h4 className="font-semibold text-sm uppercase tracking-wide text-muted-foreground">
-                        Key Achievements
+                        Key Achievements & Responsibilities
                       </h4>
                       <ul className="space-y-2">
                         {experience.achievements.map((achievement, idx) => (

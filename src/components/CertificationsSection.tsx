@@ -6,50 +6,83 @@ import { Award } from "lucide-react";
 const CertificationsSection = () => {
   const certifications = [
     {
-      title: "Professional Engineer (PE) License",
-      issuer: "National Society of Professional Engineers",
+      title: "Certified Lean Six Sigma Green Belt",
+      issuer: "Professional Certification",
       date: "2023",
-      category: "Professional"
-    },
-    {
-      title: "Certified SolidWorks Professional (CSWP)",
-      issuer: "Dassault Systèmes",
-      date: "2023",
-      category: "Technical"
-    },
-    {
-      title: "Lean Six Sigma Green Belt",
-      issuer: "ASQ - American Society for Quality",
-      date: "2022",
       category: "Process"
     },
     {
-      title: "Project Management Professional (PMP)",
-      issuer: "Project Management Institute",
+      title: "Additive Manufacturing Specialization",
+      issuer: "Industry Certification",
+      date: "2023",
+      category: "Manufacturing"
+    },
+    {
+      title: "The Complete AutoCAD 2018-21 Course",
+      issuer: "Design Software",
       date: "2022",
+      category: "Technical"
+    },
+    {
+      title: "MATLAB Onramp",
+      issuer: "MathWorks",
+      date: "2022",
+      category: "Programming"
+    },
+    {
+      title: "Semiconductor Fabrication",
+      issuer: "Industry Training",
+      date: "2022",
+      category: "Manufacturing"
+    },
+    {
+      title: "Supply Chain Management",
+      issuer: "Professional Development",
+      date: "2021",
       category: "Management"
     },
     {
-      title: "ANSYS Mechanical Certification",
-      issuer: "ANSYS Inc.",
+      title: "Introduction to Geometric Dimensioning and Tolerance",
+      issuer: "Technical Training",
       date: "2021",
       category: "Technical"
     },
     {
-      title: "ISO 9001:2015 Quality Management",
-      issuer: "International Organization for Standardization",
+      title: "International Automotive Industry 4.0 Training",
+      issuer: "Automotive Industry",
       date: "2021",
-      category: "Quality"
+      category: "Industry"
+    },
+    {
+      title: "Virtual Assessment Program on Alternate Fuels",
+      issuer: "Energy Sector",
+      date: "2021",
+      category: "Energy"
+    },
+    {
+      title: "Engineering Project Management",
+      issuer: "Professional Development",
+      date: "2021",
+      category: "Management"
+    },
+    {
+      title: "Interpersonal Skills",
+      issuer: "Soft Skills Training",
+      date: "2021",
+      category: "Professional"
     }
   ];
 
   const getCategoryColor = (category: string) => {
     const colors = {
-      Professional: "bg-blue-500",
-      Technical: "bg-green-500",
-      Process: "bg-purple-500",
-      Management: "bg-orange-500",
-      Quality: "bg-red-500"
+      Process: "bg-blue-500",
+      Manufacturing: "bg-green-500",
+      Technical: "bg-purple-500",
+      Programming: "bg-orange-500",
+      Management: "bg-red-500",
+      Industry: "bg-cyan-500",
+      Energy: "bg-yellow-500",
+      Professional: "bg-pink-500"
     };
     return colors[category as keyof typeof colors] || "bg-gray-500";
   };
@@ -58,9 +91,9 @@ const CertificationsSection = () => {
     <section id="certifications" className="py-20 px-6">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Certifications</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Certifications & Milestones</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Continuous learning and professional development in engineering excellence
+            Continuous learning and professional development across diverse engineering domains
           </p>
         </div>
 

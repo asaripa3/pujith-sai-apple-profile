@@ -8,7 +8,7 @@ const AboutSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">About Me</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Driven by curiosity and innovation in mechanical engineering
+            Driving innovation through mechanical engineering excellence
           </p>
         </div>
 
@@ -18,21 +18,22 @@ const AboutSection = () => {
               <CardContent className="p-0">
                 <h3 className="text-2xl font-semibold mb-4">Engineering Excellence</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  As a Masters graduate in Mechanical Engineering, I bring a unique blend of 
-                  theoretical knowledge and practical problem-solving skills. My passion lies 
-                  in creating innovative solutions that bridge the gap between complex engineering 
-                  challenges and real-world applications.
+                  My expertise lies in product design, rapid prototyping, and solving complex mechanical 
+                  challenges, consistently enhancing performance in dynamic manufacturing environments. 
+                  I specialize in optimizing production workflows, CAD modeling, and industrial safety 
+                  protocols to deliver exceptional results.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="p-8 hover:shadow-lg transition-all duration-300 border-border bg-card">
               <CardContent className="p-0">
-                <h3 className="text-2xl font-semibold mb-4">Innovation Focus</h3>
+                <h3 className="text-2xl font-semibold mb-4">Advanced Technical Skills</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  I specialize in design optimization, manufacturing processes, and sustainable 
-                  engineering practices. My approach combines analytical thinking with creative 
-                  problem-solving to deliver efficient and elegant engineering solutions.
+                  I leverage cutting-edge tools including ANSYS (Fluent, Structural, Thermal), 
+                  SolidWorks, MATLAB, and COMSOL to drive efficiency and innovation. My approach 
+                  combines analytical thinking with creative problem-solving, specializing in 
+                  FEA, CFD, and Lean Manufacturing principles.
                 </p>
               </CardContent>
             </Card>

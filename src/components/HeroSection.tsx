@@ -11,14 +11,17 @@ const HeroSection = () => {
     <section className="min-h-screen flex items-center justify-center px-6 pt-20">
       <div className="container mx-auto text-center">
         <div className="animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 apple-gradient">
+          <h1 
+            className="text-5xl md:text-7xl apple-name-glow mb-6"
+            data-text="Pujith Sai Eswar Allam"
+          >
             Pujith Sai Eswar Allam
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto">
-            Mechanical Engineer & Innovation Enthusiast
+            Innovative Mechanical Engineer Driving Efficiency
           </p>
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Masters graduate passionate about engineering excellence, design innovation, and creating solutions that make a difference.
+            A passionate Mechanical Engineering graduate specialized in optimizing production workflows, CAD modeling, and industrial safety. I thrive on leveraging advanced tools like ANSYS, SolidWorks, and MATLAB to drive efficiency and innovation.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

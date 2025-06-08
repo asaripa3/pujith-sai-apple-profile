@@ -5,24 +5,34 @@ import { Badge } from "@/components/ui/badge";
 const SkillsSection = () => {
   const skillCategories = [
     {
-      title: "Engineering Design",
-      skills: ["CAD Modeling", "SolidWorks", "AutoCAD", "ANSYS", "Finite Element Analysis", "Product Development"],
+      title: "Design & Modeling",
+      skills: ["AutoCAD", "SolidWorks", "Fusion360", "Tinkercad", "Mechanical Design", "GD&T"],
       color: "bg-blue-500"
     },
     {
-      title: "Manufacturing",
-      skills: ["CNC Machining", "3D Printing", "Lean Manufacturing", "Quality Control", "Process Optimization"],
+      title: "Analysis Tools",
+      skills: ["ANSYS Fluent", "ANSYS Structural", "ANSYS Thermal", "Ls Dyna", "COMSOL Multiphysics", "FEA", "CFD"],
       color: "bg-green-500"
     },
     {
-      title: "Technical Skills",
-      skills: ["MATLAB", "Python", "Project Management", "Technical Documentation", "Research & Development"],
+      title: "Programming & Data",
+      skills: ["Python", "MATLAB", "Arduino", "Microsoft Excel", "Microsoft PowerPoint", "Data Handling"],
       color: "bg-purple-500"
     },
     {
-      title: "Soft Skills",
-      skills: ["Problem Solving", "Team Leadership", "Communication", "Innovation", "Critical Thinking"],
+      title: "Manufacturing & Testing",
+      skills: ["Lean Manufacturing", "SPC", "Tensile Testing", "Fatigue Testing", "Root Cause Analysis", "Assembly"],
       color: "bg-orange-500"
+    },
+    {
+      title: "Technical Skills",
+      skills: ["Semiconductor Manufacturing", "Closed-Loop Control", "Force Calibration", "Testing & Validation"],
+      color: "bg-red-500"
+    },
+    {
+      title: "Soft Skills",
+      skills: ["Project Management", "Technical Leadership", "Problem Solving", "Team Collaboration", "Task Delegation"],
+      color: "bg-cyan-500"
     }
   ];
 
@@ -30,13 +40,13 @@ const SkillsSection = () => {
     <section id="skills" className="py-20 px-6 bg-muted/30">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Skills & Expertise</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Technical Expertise</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A comprehensive toolkit for modern mechanical engineering challenges
+            Comprehensive toolkit for advanced mechanical engineering and manufacturing excellence
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
             <Card 
               key={category.title}
