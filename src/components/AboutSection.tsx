@@ -14,7 +14,7 @@ const AboutSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <Card className="p-8 hover:shadow-lg transition-all duration-300 border-0 bg-gradient-to-br from-card to-muted/20">
+            <Card className="p-8 hover:shadow-lg transition-all duration-300 border-border bg-card">
               <CardContent className="p-0">
                 <h3 className="text-2xl font-semibold mb-4">Engineering Excellence</h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -26,7 +26,7 @@ const AboutSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="p-8 hover:shadow-lg transition-all duration-300 border-0 bg-gradient-to-br from-card to-muted/20">
+            <Card className="p-8 hover:shadow-lg transition-all duration-300 border-border bg-card">
               <CardContent className="p-0">
                 <h3 className="text-2xl font-semibold mb-4">Innovation Focus</h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -39,7 +39,7 @@ const AboutSection = () => {
           </div>
 
           <div className="relative">
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-muted/30 flex items-center justify-center">
+            <div className="aspect-square rounded-2xl bg-gradient-to-br from-muted/20 to-muted/10 flex items-center justify-center">
               <img
                 src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=600&fit=crop"
                 alt="Engineering workspace"
