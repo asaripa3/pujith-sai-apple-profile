@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -37,35 +36,42 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-6 bg-muted/30">
+    <section id="skills" className="section-spacing px-6 bg-gradient-to-b from-black to-gray-900/20">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Technical Expertise</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive toolkit for advanced mechanical engineering and manufacturing excellence
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+            Technical Mastery
+          </h2>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Comprehensive expertise across advanced engineering tools and methodologies
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {skillCategories.map((category, index) => (
             <Card 
               key={category.title}
-              className="p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 border-0 bg-gradient-to-br from-card to-background"
+              className="card-glow hover-lift p-8 transition-all duration-500 group"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-0">
-                <div className={`w-12 h-12 rounded-xl ${category.color} mb-4 flex items-center justify-center`}>
-                  <span className="text-white font-bold text-lg">{category.title[0]}</span>
+                <div className="flex items-center gap-4 mb-6">
+                  <div className={`w-14 h-14 rounded-2xl ${category.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <span className="text-white font-bold text-xl">{category.title[0]}</span>
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-white transition-colors">
+                    {category.title}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-semibold mb-4">{category.title}</h3>
-                <div className="space-y-2">
-                  {category.skills.map((skill) => (
-                    <Badge 
+                <div className="flex flex-wrap gap-3">
+                  {category.skills.map((skill, skillIndex) => (
+                    <span 
                       key={skill} 
-                      variant="secondary" 
-                      className="mr-2 mb-2 hover:bg-primary hover:text-primary-foreground transition-colors"
+                      className="px-3 py-2 rounded-full glass-effect text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-105"
+                      style={{ animationDelay: `${(index * 0.1) + (skillIndex * 0.05)}s` }}
                     >
                       {skill}
-                    </Badge>
+                    </span>
                   ))}
                 </div>
               </CardContent>

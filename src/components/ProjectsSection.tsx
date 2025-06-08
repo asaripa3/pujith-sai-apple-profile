@@ -51,63 +51,68 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-6">
+    <section id="projects" className="section-spacing px-6 bg-gradient-to-b from-gray-900/20 via-black to-black">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Innovation Portfolio</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Cutting-edge projects showcasing advanced engineering solutions and technical innovation
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+            Innovation Showcase
+          </h2>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Cutting-edge engineering projects demonstrating advanced technical solutions and innovation
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
             <Card 
               key={project.title}
-              className="group hover:shadow-xl transition-all duration-300 hover:scale-105 border-0 bg-gradient-to-br from-card to-muted/20 overflow-hidden"
+              className="card-glow hover-lift group overflow-hidden transition-all duration-500"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute top-4 right-4">
-                  <Badge variant="secondary" className="bg-background/80 backdrop-blur-sm">
+                  <span className="px-3 py-1 rounded-full glass-effect text-xs font-medium text-white">
                     {project.category}
-                  </Badge>
+                  </span>
                 </div>
               </div>
               
-              <CardHeader>
-                <CardTitle className="group-hover:text-primary transition-colors">
+              <div className="p-8">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 text-foreground group-hover:text-white transition-colors">
                   {project.title}
-                </CardTitle>
-              </CardHeader>
-              
-              <CardContent>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+                </h3>
+                
+                <p className="text-muted-foreground mb-6 leading-relaxed">
                   {project.description}
                 </p>
                 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech) => (
-                    <Badge key={tech} variant="outline" className="text-xs">
+                    <span 
+                      key={tech} 
+                      className="px-3 py-1 rounded-full glass-effect text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    >
                       {tech}
-                    </Badge>
+                    </span>
                   ))}
                 </div>
                 
-                <div className="flex gap-2">
-                  <Button size="sm" variant="outline" className="flex-1">
+                <div className="flex gap-3">
+                  <Button size="sm" variant="outline" className="flex-1 glass-effect hover:bg-white/10">
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    View Details
+                    View Project
                   </Button>
-                  <Button size="sm" variant="ghost">
+                  <Button size="sm" variant="ghost" className="glass-effect hover:bg-white/10">
                     <Github className="w-4 h-4" />
                   </Button>
                 </div>
-              </CardContent>
+              </div>
             </Card>
           ))}
         </div>
