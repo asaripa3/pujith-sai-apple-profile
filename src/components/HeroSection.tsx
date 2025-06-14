@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 
@@ -31,10 +31,11 @@ const HeroSection = () => {
             className="apple-name-glow mb-6 transition-all duration-300 ease-out"
             data-text="Pujith Sai Eswar Allam"
             style={{
-              transform: `scale(${nameScale})`,
+              // transform: `scale(${nameScale})`,
               opacity: nameOpacity,
-              fontSize: `clamp(2.5rem, ${4 + scrollY * 0.01}vw, 6rem)`
-            }}
+              fontSize: `clamp(4.3rem, ${4 + scrollY * 0.01}vw, 6rem)`,
+              ['--glow-opacity']: 0.8 + Math.min(scrollY * 0.001, 0.4)
+            } as React.CSSProperties}
           >
             <h1 className="text-5xl md:text-7xl font-bold">
               Pujith Sai Eswar Allam
@@ -56,7 +57,7 @@ const HeroSection = () => {
             <Button 
               onClick={() => scrollToSection("projects")}
               size="lg" 
-              className="group glass-effect hover-lift text-lg px-8 py-4 font-medium"
+              className="text-white hover:text-black group glass-effect hover-lift text-lg px-8 py-4 font-medium"
             >
               Explore My Work
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
